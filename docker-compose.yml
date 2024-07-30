@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    container_name: elunic-be-server
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "${PORT}:${PORT}"
+    restart: always
